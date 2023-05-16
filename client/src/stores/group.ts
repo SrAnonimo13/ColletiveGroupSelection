@@ -1,25 +1,30 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 interface State {
-    names: [{
-        id: number,
+    id: string,
+    names: {
+        id: string,
         name: string
-    }]
-}
+    }[]
+};
 
 export const useGroupStore = defineStore('GroupStore', {
     state: (): State => ({
+        id: '',
         names: [{
-            id: 0,
+            id: '',
             name: ''
         }]
     }),
     actions: {
         addNewName(){
-            this.names.push({ id: this.names.length + 1, name: '' })
+            this.names.push({ id: '', name: '' })
         },
         removeNameByIndex(index: number){
             this.names.splice(index, 1);
+        },
+        setNames(...values: {id: string, name: string}[]){
+            this.names.push(...values);
         }
     }
 });

@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import HomeView from '../views/HomeView.vue';
-import RegisterGroupView from '../views/RegisterGroupView.vue';
+import HomeView from '@/views/HomeView.vue';
+import RegisterGroupView from '@/views/RegisterGroupView.vue';
+import GroupSelectionView from '@/views/GroupSelectionView.vue';
 
 import { Routes } from "@/global/variables";
 
@@ -18,6 +19,11 @@ const router = createRouter({
       path: Routes.CREATE_GROUP,
       name: 'create group',
       component: RegisterGroupView
+    },
+    {
+      path: Routes.GROUP_SELECTION,
+      name: 'group selection',
+      component: GroupSelectionView
     }
   ]
 })

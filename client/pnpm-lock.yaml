@@ -15,6 +15,7 @@ specifiers:
   pinia: ^2.0.35
   prettier: ^2.8.8
   typescript: ~5.0.4
+  vee-validate: ^4.9.3
   vite: ^4.3.4
   vue: ^3.2.47
   vue-router: ^4.1.6
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   '@mdi/font': 7.2.96
   pinia: 2.0.36_dtjfskxukdxv24psui2m5c75zy
+  vee-validate: 4.9.3_dtjfskxukdxv24psui2m5c75zy
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
   vuetify: 3.2.3_vue@3.2.47
@@ -2217,6 +2219,15 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /type-fest/3.10.0_typescript@5.0.4:
+    resolution: {integrity: sha512-hmAPf1datm+gt3c2mvu0sJyhFy6lTkIGf0GzyaZWxRLnabQfPUqg6tF95RPg6sLxKI7nFLGdFxBcf2/7+GXI+A==}
+    engines: {node: '>=14.16'}
+    peerDependencies:
+      typescript: '>=4.7.0'
+    dependencies:
+      typescript: 5.0.4
+    dev: false
+
   /typed-array-length/1.0.4:
     resolution: {integrity: sha512-KjZypGq+I/H7HI5HlOoGHkWUUGq+Q0TPhQurLbyrVrvnKTBgzLhIJ7j6J/XTQOi0d1RjyZ0wdas8bKs2p0x3Ng==}
     dependencies:
@@ -2255,6 +2266,18 @@ packages:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
     dev: true
+
+  /vee-validate/4.9.3_dtjfskxukdxv24psui2m5c75zy:
+    resolution: {integrity: sha512-XZ5OuDa0WecESCScWzdX632e9uT/ExTacRsUiLaL46r2NqJBSE9Gr88QxV/kh7PmfD0Nb1+7/LwFYukTMeQfFw==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      type-fest: 3.10.0_typescript@5.0.4
+      vue: 3.2.47
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /vite/4.3.5_@types+node@18.16.6:
     resolution: {integrity: sha512-0gEnL9wiRFxgz40o/i/eTBwm+NEbpUeTWhzKrZDSdKm6nplj+z4lKz8ANDgildxHm47Vg8EUia0aicKbawUVVA==}
